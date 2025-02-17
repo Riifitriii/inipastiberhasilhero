@@ -1,0 +1,81 @@
+/* Reset Margin & Padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Section Hero */
+.hero {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    text-align: center;
+    color: white;
+    padding: 20px;
+    
+    background: url('background.jpg') no-repeat center center/cover;
+}
+
+/* Konten Hero */
+.hero-content {
+    max-width: 600px;
+    z-index: 1;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+/* Judul */
+.hero-content h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+/* Sub Judul */
+.hero-content p {
+    font-size: 1.2rem;
+    line-height: 1.5;
+}
+
+/* Gambar PNG (logo) di kanan bawah */
+.hero-image {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    width: 200px; /* Sesuaikan ukuran logo */
+    height: auto;
+}
+
+/* Responsif untuk Mobile */
+@media (max-width: 768px) {
+    .hero {
+        flex-direction: column;
+        text-align: center;
+        padding: 10px;
+    }
+    
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+
+    .hero-content p {
+        font-size: 1rem;
+    }
+
+    .hero-image {
+        position: absolute;
+        width: min(15vw,200px); /* Sesuaikan ukuran logo untuk mobile */
+        bottom: 20px;
+        right: 20px;
+        height: auto;
+    }
+    @media (max-width: 768px){
+        .hero-image{
+            width: min(25vw, 150px); /*dilayar kecil, minimal 150px */
+            bottom: 10px;
+            right: 10px;
+        }
+    }
+}
